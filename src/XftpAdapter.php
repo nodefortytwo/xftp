@@ -1,8 +1,9 @@
 <?php
 
-namespace League\Flysystem\Adapter;
+namespace Nodefortytwo\Xftp;
 
 use League\Flysystem\AdapterInterface;
+use League\Flysystem\Adapter\Ftp;
 
 class XftpAdapter extends Ftp
 {
@@ -38,7 +39,7 @@ class XftpAdapter extends Ftp
         $size        = (int) $size;
 
         if (strpos($time_year, ':')) {
-            $time = explode(':', $time);
+            $time = explode(':', $time_year);
             $year = date('Y');
         } else {
             $year = $time_year;
