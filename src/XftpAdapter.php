@@ -48,7 +48,7 @@ class XftpAdapter extends Ftp
 
         $month = date('m', strtotime($month));
 
-        $timestamp = mktime($year, $month, $day, $time[0], $time[1]);
+        $timestamp = mktime($time[0], $time[1], 0, $month, $day, $year);
 
         return compact('type', 'path', 'visibility', 'size', 'timestamp');
     }
